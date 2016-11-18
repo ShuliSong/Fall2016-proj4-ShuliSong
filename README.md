@@ -1,4 +1,4 @@
-# Project: Words 4 Music
+# Project: Association mining of music and text
 
 ### [Project Description](doc/Project4_desc.md)
 
@@ -8,19 +8,21 @@ Term: Fall 2016
 
 + [Data link](https://courseworks2.columbia.edu/courses/11849/files/folder/Project_Files?preview=763391)-(**courseworks login required**)
 + [Data description](doc/readme.html)
-+ Contributor's name:
-+ Projec title: Lorem ipsum dolor sit amet
-+ Project summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	
-Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
++ Contributor's name: Shuli Song <ss4962@columbia.edu>
++ Project Summary: In this project we explored the association between music features and lyrics words from a subset of songs in the [million song data](http://labrosa.ee.columbia.edu/millionsong/). We created **lyric words recommender algorithms** for a piece of music (using its music features).
++ Data Source:
+ [a set of 2350 songs from the million song data project](https://courseworks2.columbia.edu/courses/11849/files/folder/Project_Files?preview=763391)-[**coursework login required**]. This is a hacking challenge where the organizer is interested in exploring a collection of creative lyrics recommender methods that the participating data scientists can come with. The participants are **encouraged** to discuss online and exchange ideas. 
 
-```
-proj/
-├── lib/
-├── data/
-├── doc/
-├── figs/
-└── output/
-```
+The data set released contain:
 
-Please see each subfolder for a README file.
++ `Common_id.txt`: ids for the songs that have both lyrics and sound analysis information. 2350 in total;
++ `lyr.Rdata`: dim: 2350*5001. [bag-of-words](https://en.wikipedia.org/wiki/Bag-of-words_model) for 2350 songs stored in an `R` dataframe;
++ `data.zip`: [h5](https://en.wikipedia.org/wiki/Hierarchical_Data_Format) format music feature files for the 2350 songs;
++ `msm_dataset_train.txt` original text of the lyrics data. (Potentially can be used for [n-gram](https://en.wikipedia.org/wiki/N-gram) models).
+
+#### Submission
+On 11/16/2016, you will receive music features of 100 songs. We will provide you with a dictionary of 5000 words. For each song, you need to produce a *ranked list* (with the most likely being the first) of 100 suggested lyric words from the given dictionary. 
+
+
++ [Topic modeling](https://cran.r-project.org/web/packages/topicmodels/vignettes/topicmodels.pdf)
+
